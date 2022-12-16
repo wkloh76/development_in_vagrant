@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+* Add new `development.sh` to mangement programming ide. VSCodium instead VSCode.  Completed on 2022-12-16 
+* Add win7 VMs. Completed on 2022-10-07
 * Add nfs client and htp package in `general.sh`. Completed on 2022-05-10
 * Add new vm `ubuntu server` to support and only docker in `Vagrantfile`. Completed on 2022-06-10
 * Add new vm `win7_ie11` and `win10-edge` to `Vagrantfile`. Completed on 2022-06-10
@@ -17,18 +19,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+* Upgrade docker-compose to version 2.14.1 in `docker.sh`. Completed on 2022-12-16
 * Rewrite changelog present method. Completed on 2022-07-28  
-* Upgrade docker-compose to version 2.6.0 in `docker.sh`. Completed on 2022-06-10
+* ~~Upgrade docker-compose to version 2.6.0 in `docker.sh`. Completed on 2022-06-10~~
 * ~~~Add new package in `general.sh` and `nodejs_python.sh` . Completed on 2022-05-10~~~
 
 ### Deprecated 
+
+* Obsolated VScode ide from `software.sh`. Completed on 2022-12-16
 
 ### Removed 
 
 ### Fixed 
 
+* Fix installation failure in node_python.sh . Completed on 2022-10-17
+* Fix installation failure in general.sh . Completed on 2022-08-24
 * software.sh execute error in vm desktop mode. 
-  + The vscode installation problem, change to other way to solve it. Done on 2022-03-08
+  + ~~The vscode installation problem, change to other way to solve it. Done on 2022-03-08~~
   + The google-chrome missing `fonts-liberation` package dependancies. Done on 2022-03-08 
   + "nodejs_python.sh" relay on curl package to install nodejs and yarn. Completed on 2022-06-10
   + Define specifiy vm name for each unique machine in `Vagrantfile` file. Completed on 2022-06-10 
@@ -39,4 +46,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * ~~~software.sh execute error in vm desktop mode.~~~
   + ~~~The vscode installation problem, change to other way to solve it. Done on 2022-03-08~~~
   + ~~~The google-chrome missing `fonts-liberation` package dependancies. Done on 2022-03-08~~~ 
+
 ### Security

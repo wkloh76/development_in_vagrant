@@ -8,10 +8,12 @@ FILE="/home/nodepythonstatus"
 if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else
+	sudo apt update && sudo apt upgrade -y
     sudo apt install -y curl git cmake gcc g++ make tzdata build-essential \
     apt-utils apt-transport-https network-manager iputils-ping setserial libpcsclite1 \
-    libpcsclite-dev libacsccid1 pcscd pcsc-tools libssl-dev libffi-dev \
-    python3.9 python3.9-venv python3.9-dev python3-pip
+    libpcsclite-dev libacsccid1 pcscd pcsc-tools libssl-dev libffi-dev
+    #python3.9 python3.9-venv python3.9-dev python3-pip
+	sudo apt install -y python3.8-venv python3.8-dev python3-pip
     curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
     sudo apt update && sudo apt install -y nodejs
     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -21,9 +23,9 @@ else
     yarn global add node-gyp  node-gyp-build pkg
     echo "done -- node"
     
-    sudo echo "alias python=python3.9" >> /home/vagrant/.bashrc   
+    sudo echo "alias python=python3.8" >> /home/vagrant/.bashrc   
        
-    python3.9 -m venv /usr/share/prjtools/pyenv
+    python3.8 -m venv /usr/share/prjtools/pyenv
     # Active virtual environment
     # source /usr/share/prjtools/pyenv/bin/activate
     # (pyenv) root@242c1d718d69:/usr/share/prj#

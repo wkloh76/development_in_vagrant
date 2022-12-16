@@ -21,8 +21,8 @@ Vagrant.configure("2") do  |config|
 		# desktop.vm.synced_folder "D:\\prj", "/opt/share/prj"
 
 		desktop.vm.provision "shell", path: "general.sh"
-		desktop.vm.provision "shell", path: "docker.sh"
 		desktop.vm.provision "shell", path: "software.sh"
+		desktop.vm.provision "shell", path: "development.sh"
 		desktop.vm.provision "shell", path: "nodejs_python.sh", run:"always"
 	end
 
